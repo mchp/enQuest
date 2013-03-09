@@ -1,2 +1,0 @@
-Test -M
-Test commit -M
