@@ -12,12 +12,9 @@ def index(request):
 def exist(request):
 	if request.method != 'GET':
 		return empty_json()
-
-	username = request.GET.get('u',False)
-	email = request.GET.get('e', False)
 	
 	template = loader.get_template('users/exist')
-	context = exist_context(username, email)
+	context = exist_context(request)
 
 	return HttpResponse(template.render(context))
 
@@ -25,24 +22,18 @@ def register(request):
 	if request.method != 'POST':
 		return empty_json()
 	
-	username = request.POST.get("username")
-	password = request.POST.get("password")
-	email = request.POST.get("email")
 		
 	template = loader.get_template('user/register')
-	context = register_context(username, password, email)
+	context = register_context(request)
 
 	return HttpResponse(template.render(context))
 
 def login(request):
 	if request.method != 'POST':
 		return empty_json()
-	
-	username = request.POST.get("username")
-	password = request.POST.get("password")
-		
+
 	template = loader.get_template('users/login')
-	context = login_context(username, password)
+	context = login_context(request)
 
 	return HttpResponse(template.render(context))
 

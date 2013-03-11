@@ -8,3 +8,12 @@ def is_valid_email(email):
 
 def empty_json():
 	return HttpResponse("{}")
+
+def get_callback(request):
+	callback = False
+	if request.method == 'GET':
+		callback = request.GET.get("callback", False)
+	elif request.method == 'POST':
+		callback = request.POST.get("callback", False)
+
+	return callback;

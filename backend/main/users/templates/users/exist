@@ -1,3 +1,6 @@
+{% if callback %}
+{{callback}}(
+{% endif %}
 {
 {% if email %}
 	email: "{{ email }}",
@@ -8,4 +11,6 @@
 	user_has_duplicate: {{ user_exists }},
 {% endif %}
 }
-
+{% if callback %}
+)
+{% endif %}

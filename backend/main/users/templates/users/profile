@@ -1,3 +1,6 @@
+{% if callback %}
+{{callback}}(
+{% endif %}
 {% if logged_in %}
 {
 username: {{username}},
@@ -9,4 +12,7 @@ last_seen: {{last_seen}}
 {
 error: "Not logged in"
 }
+{% endif %}
+{% if callback %}
+)
 {% endif %}
