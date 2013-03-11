@@ -23,7 +23,7 @@ def register(request):
 		return empty_json()
 	
 		
-	template = loader.get_template('user/register')
+	template = loader.get_template('users/register')
 	context = register_context(request)
 
 	return HttpResponse(template.render(context))
@@ -45,3 +45,10 @@ def profile(request):
 	template = loader.get_template('users/profile')
 	context = profile_context(request)
 	return HttpResponse(template.render(context))
+
+def test(request):
+	template = loader.get_template('users/test.html')
+	context = test_context(request)
+	return HttpResponse(template.render(context))
+
+	

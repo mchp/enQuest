@@ -1,10 +1,12 @@
 from django.http import HttpResponse
 
 def is_valid_username(username):
-	return True
+	#we should do more checking
+	return len(username)>1
 
 def is_valid_email(email):
-	return True
+	#we should do more checking
+	return email.find("@") > -1
 
 def empty_json():
 	return HttpResponse("{}")

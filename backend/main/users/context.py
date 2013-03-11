@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from django.template import Context
+from django.template import Context, RequestContext
 
 from users.util import is_valid_username, is_valid_email, get_callback
 
@@ -23,7 +23,8 @@ def exist_context(request):
 	email = request.GET.get('e', False)
 	user_exists = False;
 	email_exists = False;
-
+	callback = get_callback(request)
+	
 	user_list = User.objects.all()
 
 	if username:
@@ -31,7 +32,6 @@ def exist_context(request):
 	if email:
 		email_exists = user_list.filter(email=email).exists()
 
-	callback = get_callback(request)
 	context = Context({
 		'username': username,
 		'email': email,
@@ -46,18 +46,28 @@ def register_context(request):
 	username = request.POST.get("username")
 	password = request.POST.get("password")
 	email = request.POST.get("email")
+	callback = get_callback(request)
 	success = False
 	error = ""
 
-	if is_valid_username(username) and is_valid_email(email):
+	user_list = User.objects.all()
+	
+	if user_list.filter(username=username).exists():
+		error = "Username already taken"
+	elif user_list.filter(email=email).exists():
+		error = "Email already taken"
+	elif not is_valid_username(username):
+		error = "Invalid username"
+	elif not is_valid_email(email):
+		error = "Invalid email"
+	else:
 		new_user = User.objects.create_user(username, email, password)
 		try:			
 			new_user.save()
 			success = True
 		except:
 			error = "Database error while attempting to save user"
-	else:
-		error = "Invalid username or email"
+
 	return Context({
 		"success": success,
 		"error": error,
@@ -68,6 +78,7 @@ def login_context(request):
 	username = request.POST.get("username")
 	password = request.POST.get("password")		
 	success = False
+	callback = get_callback(request)
 
 	user = authenticate(username=username, password=password)
 	if user is not None:
@@ -81,6 +92,7 @@ def logout_context(request):
 	logout(request)
 
 def profile_context(request):
+	callback = get_callback(request)
 	if request.user.is_authenticated():
 		curr_user = request.user
 		return Context({
@@ -97,3 +109,10 @@ def profile_context(request):
 			"callback": callback
 		})
 
+def test_context(request):
+	curr_user = "Anonymous"
+	if request.user.is_authenticated():
+		curr_user = request.user.username
+	return RequestContext(request, {
+		"curr_user": curr_user
+	})
