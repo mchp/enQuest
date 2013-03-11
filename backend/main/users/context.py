@@ -84,6 +84,7 @@ def login_context(request):
 	if user is not None:
 		login(request, user)
 		success = True
+
 	return Context({'success': success,
 			'callback': callback			
 			})
@@ -112,7 +113,7 @@ def profile_context(request):
 def test_context(request):
 	curr_user = "Anonymous"
 	if request.user.is_authenticated():
-		curr_user = request.user.username
+		curr_user = request.user.get_username()
 	return RequestContext(request, {
 		"curr_user": curr_user
 	})

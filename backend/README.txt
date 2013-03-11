@@ -1,6 +1,7 @@
 For all the backend developers. If you run into any problem during set up, please PLEASE update this file.
 
 Before attempting to run the code, 
+- install django-social-auth from http://django-social-auth.readthedocs.org/en/latest/installing.html
 - install MySQL from http://dev.mysql.com/downloads/installer/
 	- if there is a problem, Google it.
 - during MySQL setup, 
