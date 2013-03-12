@@ -18,8 +18,8 @@ function renewHost() {
 <title>enQuest User Module Test Form</title>
 </head>
 </body>
-Host: <input onchange="renewHost" id="host" value="localhost"/>
-Port: <input onchange="renewHost" id="port" value="8000"/>
+Host: <input onchange="renewHost()" id="host" value="localhost"/>
+Port: <input onchange="renewHost()" id="port" value="8000"/>
 <br/>You are currently logged in as <b>{{curr_user}}</b>.
 <h1>Exist</h1>
 <form id="exist" method="get">
