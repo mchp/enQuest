@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'social_auth',
     'users'
 )
 
@@ -155,3 +156,30 @@ LOGGING = {
         },
     }
 }
+
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.facebook.FacebookBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    'django.contrib.messages.context_processors.messages',
+    'social_auth.context_processors.social_auth_by_type_backends',
+)
+
+LOGIN_URL = '/users/test'
+LOGIN_REDIRECT_URL = '/users/test'
+
+SOCIAL_AUTH_SLUGIFY_USERNAMES = True
+SOCIAL_AUTH_COMPLETE_URL_NAME = 'socialauth_complete'
+SOCIAL_AUTH_ASSOCIATE_URL_NAME = 'socialauth_associate_complete'
+
+FACEBOOK_APP_ID = '100908220101157'
+FACEBOOK_API_SECRET = '9837100159764a118dec6ede77761f8a'
+FACEBOOK_EXTENDED_PERMISSIONS = ['email']

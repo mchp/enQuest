@@ -2,6 +2,10 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.template import Context, RequestContext
 
+from social_auth.models import UserSocialAuth
+from social_auth.views import complete as social_authenticate
+from social_auth.backends.facebook import load_signed_request, FacebookBackend
+
 from users.util import is_valid_username, is_valid_email, get_callback
 
 def index_context(request):
@@ -11,14 +15,13 @@ def index_context(request):
 			'user_list': User.objects.all(),
 		})
 	else:
-		context = COntext({
+		context = Context({
 			'not_logged_in': True
 		})
 
 	return context
 
 def exist_context(request):
-
 	username = request.GET.get('u',False)
 	email = request.GET.get('e', False)
 	user_exists = False;
@@ -43,11 +46,12 @@ def exist_context(request):
 	return context
 
 def register_context(request):
+	callback = get_callback(request)
+	success = False		
+
 	username = request.POST.get("username")
 	password = request.POST.get("password")
 	email = request.POST.get("email")
-	callback = get_callback(request)
-	success = False
 	error = ""
 
 	user_list = User.objects.all()
@@ -75,12 +79,16 @@ def register_context(request):
 	})
 
 def login_context(request):
-	username = request.POST.get("username")
-	password = request.POST.get("password")		
 	success = False
 	callback = get_callback(request)
 
-	user = authenticate(username=username, password=password)
+	if request.POST.get("fb"):
+		user = social_authenticate(request, FacebookBackend.name)
+	else:
+		username = request.POST.get("username")
+		password = request.POST.get("password")	
+		user = authenticate(username=username, password=password)
+
 	if user is not None:
 		login(request, user)
 		success = True
