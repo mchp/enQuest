@@ -1,19 +1,33 @@
 //
-//  EQAppDelegate.m
+//  AppDelegate.m
 //  enQuest
 //
 //  Created by Leo on 03/13/13.
 //  Copyright (c) 2013 iteloolab. All rights reserved.
 //
 
-#import "EQAppDelegate.h"
+#import "AppDelegate.h"
+#import "LoginManager.h"
 
-@implementation EQAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"LoginInformationStored"]) {
+        NSString *username = [defaults objectForKey:@"Username"];
+        NSString *password = [defaults objectForKey:@"Password"];
+        LoginManager *manager = [LoginManager sharedManager];
+        manager.delegate = self;
+        [manager loginWithUsername:username password:password];
+    }
+    
     return YES;
+}
+
+- (void)loginDidFail
+{
+    /** handle **/
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

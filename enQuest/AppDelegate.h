@@ -1,5 +1,5 @@
 //
-//  EQAppDelegate.h
+//  AppDelegate.h
 //  enQuest
 //
 //  Created by Leo on 03/13/13.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginManagerDelegate.h"
 
-@interface EQAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, LoginManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

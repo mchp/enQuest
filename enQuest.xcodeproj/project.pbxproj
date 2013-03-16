@@ -7,20 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035EDC0816F2DF30000D54BF /* RegistrationTurtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 035EDC0716F2DF30000D54BF /* RegistrationTurtle.m */; };
+		035EDC1116F3EF74000D54BF /* QuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035EDC1016F3EF73000D54BF /* QuestViewController.m */; };
+		035EDC1416F3FA5C000D54BF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035EDC1316F3FA5C000D54BF /* RootViewController.m */; };
+		035EDC1816F435CD000D54BF /* LogoutTurtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 035EDC1716F435CD000D54BF /* LogoutTurtle.m */; };
+		035EDC1B16F44D41000D54BF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 035EDC1A16F44D41000D54BF /* Constants.m */; };
+		035EDC2616F50342000D54BF /* wow_icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 035EDC2416F50342000D54BF /* wow_icon_large.png */; };
+		035EDC2716F50342000D54BF /* wow_icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 035EDC2516F50342000D54BF /* wow_icon_small.png */; };
+		037875D916F1ADA100F6195F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875D816F1ADA100F6195F /* SettingsViewController.m */; };
+		037875DA16F1ADA100F6195F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875D816F1ADA100F6195F /* SettingsViewController.m */; };
+		037875DD16F1C27300F6195F /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875DC16F1C27300F6195F /* LoginManager.m */; };
+		037875DE16F1C27300F6195F /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875DC16F1C27300F6195F /* LoginManager.m */; };
 		03BCE63416F11BBC00FCA1BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE63316F11BBC00FCA1BF /* UIKit.framework */; };
 		03BCE63616F11BBC00FCA1BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE63516F11BBC00FCA1BF /* Foundation.framework */; };
 		03BCE63816F11BBC00FCA1BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE63716F11BBC00FCA1BF /* CoreGraphics.framework */; };
 		03BCE63E16F11BBC00FCA1BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE63C16F11BBC00FCA1BF /* InfoPlist.strings */; };
 		03BCE64016F11BBC00FCA1BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE63F16F11BBC00FCA1BF /* main.m */; };
-		03BCE64416F11BBC00FCA1BF /* EQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE64316F11BBC00FCA1BF /* EQAppDelegate.m */; };
+		03BCE64416F11BBC00FCA1BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE64316F11BBC00FCA1BF /* AppDelegate.m */; };
 		03BCE64616F11BBC00FCA1BF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE64516F11BBC00FCA1BF /* Default.png */; };
 		03BCE64816F11BBC00FCA1BF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE64716F11BBC00FCA1BF /* Default@2x.png */; };
 		03BCE64A16F11BBC00FCA1BF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE64916F11BBC00FCA1BF /* Default-568h@2x.png */; };
 		03BCE64D16F11BBC00FCA1BF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE64B16F11BBC00FCA1BF /* MainStoryboard.storyboard */; };
-		03BCE65016F11BBC00FCA1BF /* EQFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE64F16F11BBC00FCA1BF /* EQFirstViewController.m */; };
+		03BCE65016F11BBC00FCA1BF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE64F16F11BBC00FCA1BF /* LoginViewController.m */; };
 		03BCE65216F11BBC00FCA1BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE65116F11BBC00FCA1BF /* first.png */; };
 		03BCE65416F11BBC00FCA1BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE65316F11BBC00FCA1BF /* first@2x.png */; };
-		03BCE65716F11BBC00FCA1BF /* EQSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE65616F11BBC00FCA1BF /* EQSecondViewController.m */; };
 		03BCE65916F11BBC00FCA1BF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE65816F11BBC00FCA1BF /* second.png */; };
 		03BCE65B16F11BBC00FCA1BF /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE65A16F11BBC00FCA1BF /* second@2x.png */; };
 		03BCE66316F11BBC00FCA1BF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE66216F11BBC00FCA1BF /* SenTestingKit.framework */; };
@@ -28,6 +38,12 @@
 		03BCE66516F11BBC00FCA1BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE63516F11BBC00FCA1BF /* Foundation.framework */; };
 		03BCE66D16F11BBC00FCA1BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE66B16F11BBC00FCA1BF /* InfoPlist.strings */; };
 		03BCE67016F11BBC00FCA1BF /* enQuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE66F16F11BBC00FCA1BF /* enQuestTests.m */; };
+		03BCE67E16F1322500FCA1BF /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67A16F1322500FCA1BF /* Turtle.m */; };
+		03BCE67F16F1322500FCA1BF /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67A16F1322500FCA1BF /* Turtle.m */; };
+		03BCE68016F1322500FCA1BF /* LoginTurtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67C16F1322500FCA1BF /* LoginTurtle.m */; };
+		03BCE68116F1322600FCA1BF /* LoginTurtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67C16F1322500FCA1BF /* LoginTurtle.m */; };
+		03BCE68416F132BA00FCA1BF /* MasterQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE68316F132BA00FCA1BF /* MasterQueueManager.m */; };
+		03BCE68516F132BA00FCA1BF /* MasterQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE68316F132BA00FCA1BF /* MasterQueueManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +57,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035EDC0616F2DF2F000D54BF /* RegistrationTurtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationTurtle.h; sourceTree = "<group>"; };
+		035EDC0716F2DF30000D54BF /* RegistrationTurtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RegistrationTurtle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		035EDC0916F2E262000D54BF /* RegistrationTurtleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationTurtleDelegate.h; sourceTree = "<group>"; };
+		035EDC0D16F306B0000D54BF /* LoginManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManagerDelegate.h; sourceTree = "<group>"; };
+		035EDC0F16F3EF73000D54BF /* QuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestViewController.h; sourceTree = "<group>"; };
+		035EDC1016F3EF73000D54BF /* QuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestViewController.m; sourceTree = "<group>"; };
+		035EDC1216F3FA5B000D54BF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		035EDC1316F3FA5C000D54BF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		035EDC1516F42CA2000D54BF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Constants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		035EDC1616F435CC000D54BF /* LogoutTurtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutTurtle.h; sourceTree = "<group>"; };
+		035EDC1716F435CD000D54BF /* LogoutTurtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LogoutTurtle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		035EDC1916F435E8000D54BF /* LogoutTurtleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutTurtleDelegate.h; sourceTree = "<group>"; };
+		035EDC1A16F44D41000D54BF /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Constants.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		035EDC2416F50342000D54BF /* wow_icon_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wow_icon_large.png; sourceTree = "<group>"; };
+		035EDC2516F50342000D54BF /* wow_icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wow_icon_small.png; sourceTree = "<group>"; };
+		037875D716F1ADA000F6195F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		037875D816F1ADA100F6195F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		037875DB16F1C27300F6195F /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		037875DC16F1C27300F6195F /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		03BCE63016F11BBC00FCA1BF /* enQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = enQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BCE63316F11BBC00FCA1BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03BCE63516F11BBC00FCA1BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,18 +84,16 @@
 		03BCE63D16F11BBC00FCA1BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03BCE63F16F11BBC00FCA1BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		03BCE64116F11BBC00FCA1BF /* enQuest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "enQuest-Prefix.pch"; sourceTree = "<group>"; };
-		03BCE64216F11BBC00FCA1BF /* EQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQAppDelegate.h; sourceTree = "<group>"; };
-		03BCE64316F11BBC00FCA1BF /* EQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQAppDelegate.m; sourceTree = "<group>"; };
+		03BCE64216F11BBC00FCA1BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03BCE64316F11BBC00FCA1BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		03BCE64516F11BBC00FCA1BF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		03BCE64716F11BBC00FCA1BF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		03BCE64916F11BBC00FCA1BF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		03BCE64C16F11BBC00FCA1BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		03BCE64E16F11BBC00FCA1BF /* EQFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQFirstViewController.h; sourceTree = "<group>"; };
-		03BCE64F16F11BBC00FCA1BF /* EQFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQFirstViewController.m; sourceTree = "<group>"; };
+		03BCE64E16F11BBC00FCA1BF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		03BCE64F16F11BBC00FCA1BF /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		03BCE65116F11BBC00FCA1BF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		03BCE65316F11BBC00FCA1BF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		03BCE65516F11BBC00FCA1BF /* EQSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EQSecondViewController.h; sourceTree = "<group>"; };
-		03BCE65616F11BBC00FCA1BF /* EQSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EQSecondViewController.m; sourceTree = "<group>"; };
 		03BCE65816F11BBC00FCA1BF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		03BCE65A16F11BBC00FCA1BF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		03BCE66116F11BBC00FCA1BF /* enQuestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = enQuestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +102,14 @@
 		03BCE66C16F11BBC00FCA1BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03BCE66E16F11BBC00FCA1BF /* enQuestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enQuestTests.h; sourceTree = "<group>"; };
 		03BCE66F16F11BBC00FCA1BF /* enQuestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = enQuestTests.m; sourceTree = "<group>"; };
+		03BCE67916F1322500FCA1BF /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
+		03BCE67A16F1322500FCA1BF /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Turtle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		03BCE67B16F1322500FCA1BF /* LoginTurtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTurtle.h; sourceTree = "<group>"; };
+		03BCE67C16F1322500FCA1BF /* LoginTurtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LoginTurtle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		03BCE67D16F1322500FCA1BF /* LoginTurtleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTurtleDelegate.h; sourceTree = "<group>"; };
+		03BCE68216F132BA00FCA1BF /* MasterQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterQueueManager.h; sourceTree = "<group>"; };
+		03BCE68316F132BA00FCA1BF /* MasterQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterQueueManager.m; sourceTree = "<group>"; };
+		03BCE68716F1333700FCA1BF /* SYNTHESIZE_GOD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNTHESIZE_GOD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +136,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		035EDC0C16F2F84B000D54BF /* Helpers and Turtles */ = {
+			isa = PBXGroup;
+			children = (
+				037875DB16F1C27300F6195F /* LoginManager.h */,
+				037875DC16F1C27300F6195F /* LoginManager.m */,
+				035EDC0D16F306B0000D54BF /* LoginManagerDelegate.h */,
+				03BCE67916F1322500FCA1BF /* Turtle.h */,
+				03BCE67A16F1322500FCA1BF /* Turtle.m */,
+				03BCE67B16F1322500FCA1BF /* LoginTurtle.h */,
+				03BCE67C16F1322500FCA1BF /* LoginTurtle.m */,
+				03BCE67D16F1322500FCA1BF /* LoginTurtleDelegate.h */,
+				035EDC1616F435CC000D54BF /* LogoutTurtle.h */,
+				035EDC1716F435CD000D54BF /* LogoutTurtle.m */,
+				035EDC1916F435E8000D54BF /* LogoutTurtleDelegate.h */,
+				035EDC0616F2DF2F000D54BF /* RegistrationTurtle.h */,
+				035EDC0716F2DF30000D54BF /* RegistrationTurtle.m */,
+				035EDC0916F2E262000D54BF /* RegistrationTurtleDelegate.h */,
+				03BCE68216F132BA00FCA1BF /* MasterQueueManager.h */,
+				03BCE68316F132BA00FCA1BF /* MasterQueueManager.m */,
+			);
+			name = "Helpers and Turtles";
+			sourceTree = "<group>";
+		};
 		03BCE62716F11BBC00FCA1BF = {
 			isa = PBXGroup;
 			children = (
@@ -128,17 +192,18 @@
 		03BCE63916F11BBC00FCA1BF /* enQuest */ = {
 			isa = PBXGroup;
 			children = (
-				03BCE64216F11BBC00FCA1BF /* EQAppDelegate.h */,
-				03BCE64316F11BBC00FCA1BF /* EQAppDelegate.m */,
 				03BCE64B16F11BBC00FCA1BF /* MainStoryboard.storyboard */,
-				03BCE64E16F11BBC00FCA1BF /* EQFirstViewController.h */,
-				03BCE64F16F11BBC00FCA1BF /* EQFirstViewController.m */,
-				03BCE65116F11BBC00FCA1BF /* first.png */,
-				03BCE65316F11BBC00FCA1BF /* first@2x.png */,
-				03BCE65516F11BBC00FCA1BF /* EQSecondViewController.h */,
-				03BCE65616F11BBC00FCA1BF /* EQSecondViewController.m */,
-				03BCE65816F11BBC00FCA1BF /* second.png */,
-				03BCE65A16F11BBC00FCA1BF /* second@2x.png */,
+				03BCE64216F11BBC00FCA1BF /* AppDelegate.h */,
+				03BCE64316F11BBC00FCA1BF /* AppDelegate.m */,
+				035EDC1216F3FA5B000D54BF /* RootViewController.h */,
+				035EDC1316F3FA5C000D54BF /* RootViewController.m */,
+				03BCE64E16F11BBC00FCA1BF /* LoginViewController.h */,
+				03BCE64F16F11BBC00FCA1BF /* LoginViewController.m */,
+				037875D716F1ADA000F6195F /* SettingsViewController.h */,
+				037875D816F1ADA100F6195F /* SettingsViewController.m */,
+				035EDC0F16F3EF73000D54BF /* QuestViewController.h */,
+				035EDC1016F3EF73000D54BF /* QuestViewController.m */,
+				035EDC0C16F2F84B000D54BF /* Helpers and Turtles */,
 				03BCE63A16F11BBC00FCA1BF /* Supporting Files */,
 			);
 			path = enQuest;
@@ -147,6 +212,15 @@
 		03BCE63A16F11BBC00FCA1BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				035EDC1516F42CA2000D54BF /* Constants.h */,
+				035EDC1A16F44D41000D54BF /* Constants.m */,
+				03BCE68616F1332400FCA1BF /* Macros */,
+				035EDC2416F50342000D54BF /* wow_icon_large.png */,
+				035EDC2516F50342000D54BF /* wow_icon_small.png */,
+				03BCE65116F11BBC00FCA1BF /* first.png */,
+				03BCE65316F11BBC00FCA1BF /* first@2x.png */,
+				03BCE65816F11BBC00FCA1BF /* second.png */,
+				03BCE65A16F11BBC00FCA1BF /* second@2x.png */,
 				03BCE63B16F11BBC00FCA1BF /* enQuest-Info.plist */,
 				03BCE63C16F11BBC00FCA1BF /* InfoPlist.strings */,
 				03BCE63F16F11BBC00FCA1BF /* main.m */,
@@ -175,6 +249,14 @@
 				03BCE66B16F11BBC00FCA1BF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03BCE68616F1332400FCA1BF /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				03BCE68716F1333700FCA1BF /* SYNTHESIZE_GOD.h */,
+			);
+			name = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +340,8 @@
 				03BCE65416F11BBC00FCA1BF /* first@2x.png in Resources */,
 				03BCE65916F11BBC00FCA1BF /* second.png in Resources */,
 				03BCE65B16F11BBC00FCA1BF /* second@2x.png in Resources */,
+				035EDC2616F50342000D54BF /* wow_icon_large.png in Resources */,
+				035EDC2716F50342000D54BF /* wow_icon_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +377,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BCE64016F11BBC00FCA1BF /* main.m in Sources */,
-				03BCE64416F11BBC00FCA1BF /* EQAppDelegate.m in Sources */,
-				03BCE65016F11BBC00FCA1BF /* EQFirstViewController.m in Sources */,
-				03BCE65716F11BBC00FCA1BF /* EQSecondViewController.m in Sources */,
+				03BCE64416F11BBC00FCA1BF /* AppDelegate.m in Sources */,
+				03BCE65016F11BBC00FCA1BF /* LoginViewController.m in Sources */,
+				03BCE67E16F1322500FCA1BF /* Turtle.m in Sources */,
+				03BCE68016F1322500FCA1BF /* LoginTurtle.m in Sources */,
+				03BCE68416F132BA00FCA1BF /* MasterQueueManager.m in Sources */,
+				037875D916F1ADA100F6195F /* SettingsViewController.m in Sources */,
+				037875DD16F1C27300F6195F /* LoginManager.m in Sources */,
+				035EDC0816F2DF30000D54BF /* RegistrationTurtle.m in Sources */,
+				035EDC1116F3EF74000D54BF /* QuestViewController.m in Sources */,
+				035EDC1416F3FA5C000D54BF /* RootViewController.m in Sources */,
+				035EDC1816F435CD000D54BF /* LogoutTurtle.m in Sources */,
+				035EDC1B16F44D41000D54BF /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +397,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BCE67016F11BBC00FCA1BF /* enQuestTests.m in Sources */,
+				03BCE67F16F1322500FCA1BF /* Turtle.m in Sources */,
+				03BCE68116F1322600FCA1BF /* LoginTurtle.m in Sources */,
+				03BCE68516F132BA00FCA1BF /* MasterQueueManager.m in Sources */,
+				037875DA16F1ADA100F6195F /* SettingsViewController.m in Sources */,
+				037875DE16F1C27300F6195F /* LoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +574,7 @@
 				03BCE67516F11BBC00FCA1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03BCE67616F11BBC00FCA1BF /* Build configuration list for PBXNativeTarget "enQuestTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +583,7 @@
 				03BCE67816F11BBC00FCA1BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,19 @@
+//
+//  Constants.h
+//  enQuest
+//
+//  Created by Leo on 03/15/13.
+//  Copyright (c) 2013 iteloolab. All rights reserved.
+//
+
+extern NSString *const EQServerDomain;
+extern NSString *const EQErrorDomain;
+
+// Login notification names
+extern NSString *const LoginNotification;
+extern NSString *const LogoutNotification;
+
+// NSUserDefault keys
+extern NSString *const LoginInformationStoredKey;
+extern NSString *const StoredUsernameKey;
+extern NSString *const StoredPasswordKey;
