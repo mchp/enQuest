@@ -1,0 +1,12 @@
+{% if callback %}
+{{callback}}(
+{% endif %}
+{
+success:{{success}},
+{% if not success %}
+error: {{error}}	
+{% endif %}
+}
+{% if callback %}
+)
+{% endif %}

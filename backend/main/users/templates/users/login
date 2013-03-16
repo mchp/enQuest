@@ -1,0 +1,9 @@
+{% if callback %}
+{{callback}}(
+{% endif %}
+{
+login_success: {{success}}
+}
+{% if callback %}
+)
+{% endif %}
