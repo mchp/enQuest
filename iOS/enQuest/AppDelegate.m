@@ -15,9 +15,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"LoginInformationStored"]) {
-        NSString *username = [defaults objectForKey:@"Username"];
-        NSString *password = [defaults objectForKey:@"Password"];
+    if ([defaults objectForKey:LoginInformationStoredKey]) {
+        NSString *username = [defaults objectForKey:StoredUsernameKey];
+        NSString *password = [defaults objectForKey:StoredPasswordKey];
         
         NSLog(@"...Login info retrieved: { %@ : %@ }", username, password);
         

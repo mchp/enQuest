@@ -51,7 +51,8 @@ SYNTHESIZE_GOD(LoginManager, sharedManager);
     [defaults setBool:YES forKey:LoginInformationStoredKey];
     [defaults setObject:turtle.username forKey:StoredUsernameKey];
     [defaults setObject:turtle.password forKey:StoredPasswordKey];
-    [defaults synchronize];
+    BOOL success = [defaults synchronize];
+    NSAssert(success, @"login info save failed");
     
     NSLog(@"...Login info saved: { %@ : %@ }", turtle.username, turtle.password);
     
@@ -91,7 +92,8 @@ SYNTHESIZE_GOD(LoginManager, sharedManager);
     [defaults setBool:NO forKey:LoginInformationStoredKey];
     [defaults setObject:nil forKey:StoredUsernameKey];
     [defaults setObject:nil forKey:StoredPasswordKey];
-    [defaults synchronize];
+    BOOL success = [defaults synchronize];
+    NSAssert(success, @"login info reset save failed");
     
     NSLog(@"...Login info reset.");
     
