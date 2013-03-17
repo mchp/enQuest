@@ -16,11 +16,12 @@
 
 @implementation RootViewController
 
+@synthesize waitScreen;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        waitScreen = nil;
     }
     return self;
 }
@@ -28,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissWaitScreen) name:LoginNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLoginNotification) name:LoginNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayLoginScreen) name:LogoutNotification object:nil];
 }
 
@@ -52,13 +53,21 @@
     [self performSegueWithIdentifier:@"LoginScreen" sender:self];
 }
 
-- (void)dismissWaitScreen
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"...dismissWaitScreen");
-    /** make sure this is wait screen **/
-    [self dismissViewControllerAnimated:NO completion:nil];
+    if ([segue.identifier isEqualToString:@"WaitScreen"]) {
+        self.waitScreen = segue.destinationViewController;
+    }
 }
 
+- (void)handleLoginNotification
+{
+    if (waitScreen) {
+        NSLog(@"...dismissWaitScreen");
+        [waitScreen dismissViewControllerAnimated:NO completion:nil];
+        waitScreen = nil;
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

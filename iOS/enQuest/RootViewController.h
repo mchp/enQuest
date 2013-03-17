@@ -10,4 +10,6 @@
 
 @interface RootViewController : UITabBarController
 
+@property (nonatomic, strong) UIViewController *waitScreen;
+
 @end

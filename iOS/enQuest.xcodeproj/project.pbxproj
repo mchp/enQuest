@@ -15,9 +15,7 @@
 		035EDC2616F50342000D54BF /* wow_icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 035EDC2416F50342000D54BF /* wow_icon_large.png */; };
 		035EDC2716F50342000D54BF /* wow_icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 035EDC2516F50342000D54BF /* wow_icon_small.png */; };
 		037875D916F1ADA100F6195F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875D816F1ADA100F6195F /* SettingsViewController.m */; };
-		037875DA16F1ADA100F6195F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875D816F1ADA100F6195F /* SettingsViewController.m */; };
 		037875DD16F1C27300F6195F /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875DC16F1C27300F6195F /* LoginManager.m */; };
-		037875DE16F1C27300F6195F /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 037875DC16F1C27300F6195F /* LoginManager.m */; };
 		03BCE63416F11BBC00FCA1BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE63316F11BBC00FCA1BF /* UIKit.framework */; };
 		03BCE63616F11BBC00FCA1BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE63516F11BBC00FCA1BF /* Foundation.framework */; };
 		03BCE63816F11BBC00FCA1BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BCE63716F11BBC00FCA1BF /* CoreGraphics.framework */; };
@@ -39,11 +37,8 @@
 		03BCE66D16F11BBC00FCA1BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03BCE66B16F11BBC00FCA1BF /* InfoPlist.strings */; };
 		03BCE67016F11BBC00FCA1BF /* enQuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE66F16F11BBC00FCA1BF /* enQuestTests.m */; };
 		03BCE67E16F1322500FCA1BF /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67A16F1322500FCA1BF /* Turtle.m */; };
-		03BCE67F16F1322500FCA1BF /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67A16F1322500FCA1BF /* Turtle.m */; };
 		03BCE68016F1322500FCA1BF /* LoginTurtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67C16F1322500FCA1BF /* LoginTurtle.m */; };
-		03BCE68116F1322600FCA1BF /* LoginTurtle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE67C16F1322500FCA1BF /* LoginTurtle.m */; };
 		03BCE68416F132BA00FCA1BF /* MasterQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE68316F132BA00FCA1BF /* MasterQueueManager.m */; };
-		03BCE68516F132BA00FCA1BF /* MasterQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCE68316F132BA00FCA1BF /* MasterQueueManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,11 +392,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BCE67016F11BBC00FCA1BF /* enQuestTests.m in Sources */,
-				03BCE67F16F1322500FCA1BF /* Turtle.m in Sources */,
-				03BCE68116F1322600FCA1BF /* LoginTurtle.m in Sources */,
-				03BCE68516F132BA00FCA1BF /* MasterQueueManager.m in Sources */,
-				037875DA16F1ADA100F6195F /* SettingsViewController.m in Sources */,
-				037875DE16F1C27300F6195F /* LoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
