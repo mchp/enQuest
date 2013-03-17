@@ -2,9 +2,9 @@
 {{callback}}(
 {% endif %}
 {
-success:{{success}},
+"success":"{{success}}",
 {% if not success %}
-error: {{error}}	
+"error": "{{error}}"	
 {% endif %}
 }
 {% if callback %}

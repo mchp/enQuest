@@ -2,7 +2,7 @@
 {{callback}}(
 {% endif %}
 {
-login_success: {{success}}
+"login_success": "{{success}}"
 }
 {% if callback %}
 )

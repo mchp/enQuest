@@ -3,14 +3,14 @@
 {% endif %}
 {% if logged_in %}
 {
-username: {{username}},
-email: {{email}},
-joined: {{joined}},
-last_seen: {{last_seen}}
+"username": "{{username}}",
+"email": "{{email}}",
+"joined": "{{joined}}",
+"last_seen": "{{last_seen}}"
 }
 {% else %}
 {
-error: "Not logged in"
+"error": "Not logged in"
 }
 {% endif %}
 {% if callback %}
