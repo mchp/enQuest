@@ -55,6 +55,13 @@
     logoutButton.alpha = DisabledButtonAlpha;
 }
 
+- (void)logoutDidFinish
+{
+    /* re-enable logout button */
+    logoutButton.enabled = YES;
+    logoutButton.alpha = 1.0;
+}
+
 - (void)logoutDidFailWithError:(NSError *)error
 {
     /** present some kind of alert **/
