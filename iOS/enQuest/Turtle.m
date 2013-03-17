@@ -53,22 +53,11 @@
 {
     [self parseData];
     /** only continue if no error **/
+    
     [self performSelectorOnMainThread:@selector(finishUp) withObject:nil waitUntilDone:NO];
 }
 
 - (void)parseData {
-}
-
-- (NSString*)CSRFToken {    
-    // get cookies
-    [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@users/test/", EQServerDomain]]] returningResponse:nil error:NULL];
-    
-    // get CSRF key from cookie
-    NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:EQServerDomain]];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name==\"csrftoken\""];
-    NSArray *csrf_cookies = [cookies filteredArrayUsingPredicate:predicate];
-    NSHTTPCookie *cookie = [csrf_cookies lastObject];
-    return [cookie value];
 }
 
 - (void)finishUp

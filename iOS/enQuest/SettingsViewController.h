@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginManagerDelegate.h"
 
-@interface SettingsViewController : UITableViewController
+@interface SettingsViewController : UITableViewController <LoginManagerDelegate>
 
 
 @property(nonatomic, strong) IBOutlet UILabel *loginStatus;
+@property(nonatomic, strong) IBOutlet UIButton *logoutButton;
 
 - (IBAction)logout:(id)sender;
 

@@ -19,6 +19,8 @@
 @synthesize scrollView;
 @synthesize username_field;
 @synthesize password_field;
+@synthesize loginButton;
+@synthesize registerButton;
 @synthesize reg_username_field;
 @synthesize reg_password_field;
 @synthesize reg_confirm_password_field;
@@ -50,7 +52,9 @@
 {
     LoginManager *manager = [LoginManager sharedManager];
     manager.delegate = self;
-    [manager loginWithUsername:self.username_field.text password:self.password_field.text];
+    [manager loginWithUsername:username_field.text password:password_field.text];
+    loginButton.enabled = NO;
+    loginButton.alpha = DisabledButtonAlpha;
 }
 
 - (void)loginDidFinish
@@ -59,8 +63,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)loginDidFail
+- (void)loginDidFailWithError:(NSError *)error
 {
+    loginButton.enabled = YES;
+    loginButton.alpha = 1.0;
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login was unsuccessful." message:@"Please check your username and password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
@@ -82,6 +88,10 @@
     RegistrationTurtle *t = [[RegistrationTurtle alloc] init];
     t.delegate = self;
     [t registerWithUsername:u password:p email:e];
+    
+    /* disable button */
+    registerButton.enabled = NO;
+    registerButton.alpha = DisabledButtonAlpha;
 }
 
 - (void)registrationTurtleDidFinishRegister:(RegistrationTurtle*)turtle
@@ -92,6 +102,10 @@
     self.reg_confirm_password_field.text = @"";
     self.reg_email_field.text = @"";
     
+    /* re-enable button */
+    registerButton.enabled = YES;
+    registerButton.alpha = 1.0;
+    
     /* present alert to notify success */
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Registration successful! Please login above.",@"Title for alert displayed when registration is successful.") message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
@@ -99,6 +113,12 @@
 
 - (void)registrationTurtleDidFailRegister:(RegistrationTurtle*)turtle withError:(NSError *)error
 {
+    
+    /* re-enable button */
+    registerButton.enabled = YES;
+    registerButton.alpha = 1.0;
+
+    /* present alert */
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:error.localizedDescription message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }

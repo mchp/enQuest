@@ -11,6 +11,8 @@
 @protocol LoginManagerDelegate <NSObject>
 @optional
 - (void)loginDidFinish;
-- (void)loginDidFail;
+- (void)loginDidFailWithError:(NSError*)error;
+- (void)logoutDidFinish;
+- (void)logoutDidFailWithError:(NSError*)error;
 
 @end

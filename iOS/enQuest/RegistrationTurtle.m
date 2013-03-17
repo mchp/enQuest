@@ -8,6 +8,8 @@
 
 #import "RegistrationTurtle.h"
 #import "RegistrationTurtleDelegate.h"
+#import "CSRFTurtle.h"
+#import "CSRFTurtleDelegate.h"
 
 @implementation RegistrationTurtle
 
@@ -15,6 +17,7 @@
 @synthesize username;
 @synthesize password;
 @synthesize email;
+@synthesize token;
 @synthesize delegate;
 
 - (id)init {
@@ -30,16 +33,27 @@
     self.password = p;
     self.email = e;
     
-    /* isloading? */
+    CSRFTurtle *t = [[CSRFTurtle alloc] init];
+    t.delegate = self;
+    [t getToken];
+}
+
+- (void)CSRFTurtle:(CSRFTurtle *)turtle didGetToken:(NSString *)t
+{
+    token = t;
     [self doWork];
 }
 
+- (void)CSRFTurtleDidFailGetToken:(CSRFTurtle *)turtle withError:(NSError *)error
+{
+    [self handleError:error];
+}
+
 - (NSURLRequest *)generateRequest {
-    NSString *csrf_token = [self CSRFToken];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@users/register/", EQServerDomain]];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:StandardConnectionTimeoutPeriod];
     [request setHTTPMethod:@"POST"];
-    [request setValue:csrf_token forHTTPHeaderField:@"X-CSRFToken"];
+    [request setValue:token forHTTPHeaderField:@"X-CSRFToken"];
     NSString *str = [NSString stringWithFormat:@"username=%@&password=%@&email=%@", self.username, self.password, self.email];
     [request setHTTPBody:[str dataUsingEncoding:NSUTF8StringEncoding]];
     

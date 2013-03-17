@@ -53,6 +53,8 @@ SYNTHESIZE_GOD(LoginManager, sharedManager);
     [defaults setObject:turtle.password forKey:StoredPasswordKey];
     [defaults synchronize];
     
+    NSLog(@"...Login info saved: { %@ : %@ }", turtle.username, turtle.password);
+    
     NSNotification *note = [NSNotification notificationWithName:LoginNotification object:self];
 	[[NSNotificationCenter defaultCenter] postNotification:note];
     
@@ -64,8 +66,9 @@ SYNTHESIZE_GOD(LoginManager, sharedManager);
 
 - (void)loginTurtleDidFailLogin:(LogoutTurtle *)turtle withError:(NSError *)error
 {
-    if ([self.delegate respondsToSelector:@selector(loginDidFail)]) {
-        [self.delegate loginDidFail];
+    status = LoggedOut;
+    if ([self.delegate respondsToSelector:@selector(loginDidFailWithError:)]) {
+        [self.delegate loginDidFailWithError:error];
     }
     delegate = nil;
 }
@@ -90,12 +93,24 @@ SYNTHESIZE_GOD(LoginManager, sharedManager);
     [defaults setObject:nil forKey:StoredPasswordKey];
     [defaults synchronize];
     
+    NSLog(@"...Login info reset.");
+    
+    if ([delegate respondsToSelector:@selector(logoutDidFinish)]) {
+        [delegate logoutDidFinish];
+    }
+    delegate = nil;
+    
     NSNotification *note = [NSNotification notificationWithName:LogoutNotification object:self];
 	[[NSNotificationCenter defaultCenter] postNotification:note];
     
-    delegate = nil;
 }
 
-
+- (void)logoutTurtleDidFailLogout:(LogoutTurtle *)turtle withError:(NSError *)error
+{
+    if ([delegate respondsToSelector:@selector(logoutDidFailWithError:)]) {
+        [delegate logoutDidFailWithError:error];
+    }
+    delegate = nil;
+}
 
 @end

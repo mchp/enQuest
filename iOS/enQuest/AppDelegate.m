@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginManager.h"
+#import "RootViewController.h"
 
 @implementation AppDelegate
 
@@ -17,17 +18,26 @@
     if ([defaults objectForKey:@"LoginInformationStored"]) {
         NSString *username = [defaults objectForKey:@"Username"];
         NSString *password = [defaults objectForKey:@"Password"];
+        
+        NSLog(@"...Login info retrieved: { %@ : %@ }", username, password);
+        
         LoginManager *manager = [LoginManager sharedManager];
         manager.delegate = self;
         [manager loginWithUsername:username password:password];
+    }
+    else
+    {
+        NSLog(@"...Cannot retrieve login info.");
     }
     
     return YES;
 }
 
-- (void)loginDidFail
+- (void)loginDidFailWithError:(NSError *)error
 {
-    /** handle **/
+    /** hack: move to notification later (rmb to remove RVC header)**/
+    RootViewController *rvc = (RootViewController*) self.window.rootViewController;
+    [rvc handleLoginNotification];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

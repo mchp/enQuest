@@ -19,7 +19,7 @@
 }
 
 - (NSURLRequest *)generateRequest {
-    return [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/users/logout/", EQServerDomain]]];
+    return [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/users/logout/", EQServerDomain]] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:StandardConnectionTimeoutPeriod];
 }
 
 - (void)finishUp {

@@ -18,7 +18,6 @@
 - (void)synchronouslyDoWork;
 - (NSURLRequest *)generateRequest;
 - (void)parseData;
-- (NSString*)CSRFToken;
 - (void)finishUp;
 - (void)handleErrorOnMainThread:(NSError*)error;
 - (void)handleError:(NSError*)error;

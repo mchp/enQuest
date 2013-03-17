@@ -96,6 +96,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="3Ou-UH-t9R"/>
                     <connections>
                         <outlet property="loginStatus" destination="49k-qo-uoX" id="rZd-HA-Rwc"/>
+                        <outlet property="logoutButton" destination="vxB-28-Dij" id="TbR-9m-SIv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UgE-KX-qSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,7 +267,7 @@
                                             <outlet property="delegate" destination="2" id="NPF-mm-nDc"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Don't have an account? Register here: " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="psa-hY-0lP">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Don't have an account? Register here: " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="psa-hY-0lP">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="4fM-UW-Fx1"/>
                                         </constraints>
@@ -342,11 +343,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="hdo-VA-llF" id="aVg-Fc-upo"/>
                         <outlet property="password_field" destination="1Ic-lW-z6L" id="YN9-UE-FJD"/>
                         <outlet property="reg_confirm_password_field" destination="EbO-ed-VNO" id="sH2-Fw-ATz"/>
                         <outlet property="reg_email_field" destination="kcQ-vW-7VE" id="9YJ-FN-ttN"/>
                         <outlet property="reg_password_field" destination="iRQ-TP-CMv" id="keA-Xu-I5O"/>
                         <outlet property="reg_username_field" destination="uBI-S9-gMd" id="L5D-Py-hOF"/>
+                        <outlet property="registerButton" destination="OWH-Jw-bbf" id="Ds0-Xn-1n6"/>
                         <outlet property="scrollView" destination="aJ6-Qa-IBi" id="lqH-Gw-MSL"/>
                         <outlet property="username_field" destination="apd-QZ-1jB" id="hYp-jz-kwn"/>
                     </connections>
@@ -417,11 +420,13 @@
             <relationships>
                 <relationship kind="action" name="login:"/>
                 <relationship kind="action" name="registerNewUser:"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="password_field" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="reg_confirm_password_field" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="reg_email_field" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="reg_password_field" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="reg_username_field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registerButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="username_field" candidateClass="UITextField"/>
             </relationships>
@@ -440,6 +445,7 @@
             <relationships>
                 <relationship kind="action" name="logout:"/>
                 <relationship kind="outlet" name="loginStatus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

@@ -18,6 +18,8 @@
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextField *username_field;
 @property (strong, nonatomic) IBOutlet UITextField *password_field;
+@property (strong, nonatomic) IBOutlet UIButton *loginButton;
+@property (strong, nonatomic) IBOutlet UIButton *registerButton;
 
 @property (strong, nonatomic) IBOutlet UITextField *reg_username_field;
 @property (strong, nonatomic) IBOutlet UITextField *reg_password_field;

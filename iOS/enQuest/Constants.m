@@ -11,6 +11,8 @@
 
 NSString *const EQServerDomain = @"http://192.168.1.64:8000/";
 NSString *const EQErrorDomain = @"com.iteloolab.enQuest.ErrorDomain";
+const NSTimeInterval StandardConnectionTimeoutPeriod = 7.0;
+const CGFloat DisabledButtonAlpha = 0.5;
 
 NSString *const LoginNotification = @"LoginNotification";
 NSString *const LogoutNotification = @"LogoutNotification";

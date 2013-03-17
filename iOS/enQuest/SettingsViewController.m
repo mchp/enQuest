@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "LoginManager.h"
+#import "LoginManagerDelegate.h"
 
 @interface SettingsViewController ()
 
@@ -16,6 +17,7 @@
 @implementation SettingsViewController
 
 @synthesize loginStatus;
+@synthesize logoutButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,8 +46,25 @@
 
 - (IBAction)logout:(id)sender
 {
-    [[LoginManager sharedManager] logout];
+    LoginManager *manager = [LoginManager sharedManager];
+    manager.delegate = self;
+    [manager logout];
+    
+    /* disable logout button */
+    logoutButton.enabled = NO;
+    logoutButton.alpha = DisabledButtonAlpha;
 }
+
+- (void)logoutDidFailWithError:(NSError *)error
+{
+    /** present some kind of alert **/
+    /** need to wait for better error handling objects **/
+    
+    /* re-enable logout button */
+    logoutButton.enabled = YES;
+    logoutButton.alpha = 1.0;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

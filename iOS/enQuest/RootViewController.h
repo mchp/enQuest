@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) UIViewController *waitScreen;
 
+- (void)handleLoginNotification;
+
 @end

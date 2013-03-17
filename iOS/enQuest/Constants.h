@@ -8,6 +8,8 @@
 
 extern NSString *const EQServerDomain;
 extern NSString *const EQErrorDomain;
+extern const NSTimeInterval StandardConnectionTimeoutPeriod;
+extern const CGFloat DisabledButtonAlpha;
 
 // Login notification names
 extern NSString *const LoginNotification;
