@@ -13,7 +13,7 @@ Once MySQL is all set up,
 	- in Ubuntu, this is "sudo service mysql start"
 	- Windows and Mac, you can figure it out yourself
 - create database enQuest;
-	- in command prompt, type "mysql -u root -proot"
+	- in command prompt, type "mysql -u enQuest -px7HFjzPMGjxxP86y"
 	- in mysql prompt, type "create database enQuest"
 - in backend/main/, run "python manage.py syncdb" to make sure Django is talking to MySQL properly
 
