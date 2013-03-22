@@ -12,4 +12,5 @@ Errors = {
 'invalid_username': Error(5, 'The requested username does not fit the requirement.'),
 'invalid_email': Error(6, 'The requested email does not appear to be valid.'),
 'database_error': Error(7, 'Unknown Databases Error.'),
+'invalid_password': Error(8, 'The password submitted does not meet security requirement.')
 };

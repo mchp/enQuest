@@ -7,7 +7,7 @@ from social_auth.models import UserSocialAuth
 from social_auth.views import complete as social_authenticate
 from social_auth.backends.facebook import load_signed_request, FacebookBackend
 
-from users.util import is_valid_username, is_valid_email, get_callback
+from users.util import is_valid_username, is_valid_email, is_valid_password, get_callback
 from errors.list import Errors
 
 def index_context(request):
@@ -81,6 +81,9 @@ def register_context(request):
 	elif not is_valid_email(email):
 		ctx_dict['error_code'] = Errors['invalid_email'].code
 		ctx_dict['error_msg'] = Errors['invalid_email'].msg
+	elif not is_valid_password(password):
+		ctx_dict['error_code'] = Errors['invalid_password'].code
+		ctx_dict['error_msg'] = Errors['invalid_password'].msg		
 	else:
 		new_user = User.objects.create_user(username, email, password)
 		try:			
