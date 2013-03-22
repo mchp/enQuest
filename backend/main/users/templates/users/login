@@ -2,7 +2,15 @@
 {{callback}}(
 {% endif %}
 {
+{% if error_code %}
+	"error_code": "{{error_code}}",
+	"error_message": "{{error_msg}}",
+	{% if error_data %}
+		"error_data": {{error_data}},
+	{% endif %}
+{% else %}
 "login_success": "{{success}}"
+{% endif %}
 }
 {% if callback %}
 )
