@@ -1,0 +1,65 @@
+HTML Pages
+
+/admin/
+'nuff said
+
+/users/
+- list of current user names and their IDs in the database
+- only works if the user is signed in
+- for testing only, not to be released
+
+/users/test/
+- a web interface to test the APIs of the user module
+- for testing only, not to be released
+
+APIs
+
+/token/
+The place to get csrf token as a cookie. Response body is empty.
+
+/users/exist/
+GET request to check if an username or email already exists in the database. No CSRF token needed.
+parameters (1 or 2 of {u, e} must be present): 
+	u - username to be checked
+	e - email to be checked
+	callback - callback function
+returns:
+	if parameter u is present
+		username: {the username that was sent}
+		user_exists: {boolean}
+	if parameter e is present
+		email: {the email that was sent}
+		email_exists: {boolean}
+error: 9, 1 in order of priority
+
+/users/register/
+POST request to register a user. Checks for CSRF token.
+parameters (all 3 must be present):
+	username - the username to be registered
+	password - the password to be registered
+	email - the email address to be registered
+returns:
+	success: {boolean}
+error: 9, 2, 3, 4, 5, 6, 8, 7 in order of priority
+
+/users/login/
+POST request to log a user in. Checks for CSRF token.
+parameters (both must be present):
+	username
+	password
+returns:
+	login_success: {boolean}
+error: 9
+
+/users/logout/
+Log out the current user. Never complains. Returns nothing
+
+/users/profile/
+GET request to get information on the current logged in user. Does not check for CSRF token
+parameters: none
+returns:
+	username: {string}
+	email: {string}
+	joined: {MMMM d, yyyy, h:mm a.m.}
+	last_seen: {MMMM d, yyyy, h:mm a.m.}
+error: 9,1 in order of priority
