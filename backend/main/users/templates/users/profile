@@ -1,18 +1,20 @@
 {% if callback %}
 {{callback}}(
 {% endif %}
-{% if logged_in %}
 {
+{% if error_code %}
+	"error_code": "{{error_code}}",
+	"error_message": "{{error_msg}}",
+	{% if error_data %}
+		"error_data": {{error_data}},
+	{% endif %}
+{% else %}
 "username": "{{username}}",
 "email": "{{email}}",
 "joined": "{{joined}}",
 "last_seen": "{{last_seen}}"
-}
-{% else %}
-{
-"error": "Not logged in"
-}
 {% endif %}
+}
 {% if callback %}
 )
 {% endif %}

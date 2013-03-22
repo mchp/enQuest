@@ -2,10 +2,16 @@
 {{callback}}(
 {% endif %}
 {
+{% if error_code %}
+	"error_code": "{{error_code}}",
+	"error_message": "{{error_msg}}"
+{% endif %}
+
 {% if email %}
 	"email": "{{ email }}",
 	"email_has_duplicate": "{{ email_exists }}",
 {% endif %}
+
 {% if username %}
 	"user": "{{ username }}",
 	"user_has_duplicate": "{{ user_exists }}",

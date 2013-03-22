@@ -1,5 +1,6 @@
-{% if not_logged_in %}
-	You must log in to see the list of users
+{% if error_code %}
+	error code: {{error_code}}<br/>
+	error message: {{error_msg}}
 {% elif user_list%}
 	<table>
 	<tr>
